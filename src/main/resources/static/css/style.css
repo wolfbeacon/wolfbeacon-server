@@ -108,9 +108,6 @@
 	.clientid-copy-btn:hover:before {
     	transform: translateX(50%)
 	}
-	.clientid-span{
-		font-family: "CalibreWeb-Regular";
-	}
 	.token-copy-btn{
 		position: relative;
 	    display: inline-block;
@@ -139,9 +136,6 @@
 
 	.token-copy-btn:hover:before {
     	transform: translateX(50%)
-	}
-	.token-span{
-		font-family: "CalibreWeb-Regular";
 	}
 	.token{
 		display: block;
