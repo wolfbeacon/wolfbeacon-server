@@ -1,12 +1,4 @@
 @font-face {
-    font-family: "CalibreWeb-Light";
-    src: url(../fonts/CalibreWeb-Light.eot);
-    src: url(../fonts/CalibreWeb-Light.eot#iefix) format("embedded-opentype"), url(../fonts/CalibreWeb-Light.woff) format("woff");
-    font-weight: normal;
-    font-style: normal
-}
-
-@font-face {
     font-family: "CalibreWeb-Regular";
     src: url(../fonts/CalibreWeb-Regular.eot);
     src: url(../fonts/CalibreWeb-Regular.eot#iefix) format("embedded-opentype"), url(../fonts/CalibreWeb-Regular.woff) format("woff");
