@@ -15,22 +15,6 @@
 }
 
 @font-face {
-    font-family: "CalibreWeb-Medium";
-    src: url(../fonts/CalibreWeb-Medium.eot);
-    src: url(../fonts/CalibreWeb-Medium.eot#iefix)  format("embedded-opentype"), url(../fonts/CalibreWeb-Medium.woff) format("woff");
-    font-weight: normal;
-    font-style: normal
-}
-
-@font-face {
-    font-family: "CalibreWeb-MediumItalic";
-    src: url(../fonts/CalibreWeb-MediumItalic.eot);
-    src: url(../fonts/CalibreWeb-MediumItalic.eot#iefix)  format("embedded-opentype"), url(../fonts/CalibreWeb-MediumItalic.woff) format("woff");
-    font-weight: normal;
-    font-style: normal
-}
-
-@font-face {
     font-family: "CalibreWeb-Bold";
     src: url(../fonts/CalibreWeb-Bold.eot);
     src: url(../fonts/CalibreWeb-Bold.eot#iefix) format("embedded-opentype"), url(../fonts/CalibreWeb-Bold.woff) format("woff");
@@ -38,29 +22,6 @@
     font-style: normal
 }
 
-@font-face {
-    font-family: "RemoPro-Medium";
-    src: url(../fonts/RemoPro-SemiBold.eot);
-    src: url(../fonts/RemoPro-SemiBold.eot#iefix) format("embedded-opentype"), url(../fonts/RemoPro-SemiBold.woff) format("woff");
-    font-weight: normal;
-    font-style: normal
-}
-
-@font-face {
-    font-family: "RemoPro-SemiBold";
-    src: url(../fonts/RemoPro-SemiBold.eot);
-    src: url(../fonts/RemoPro-SemiBold.eot#iefix) format("embedded-opentype"), url(../fonts/RemoPro-SemiBold.woff) format("woff");
-    font-weight: normal;
-    font-style: normal
-}
-
-@font-face {
-    font-family: "RemoPro-ExtraBold";
-    src: url(../fonts/RemoPro-ExtraBold.eot);
-    src: url(../fonts/RemoPro-ExtraBold.eot#iefix) format("embedded-opentype"), url(../fonts/RemoPro-ExtraBold.woff) format("woff");
-    font-weight: normal;
-    font-style: normal
-}
     html, body {
         padding: 0;
         margin: 0;
