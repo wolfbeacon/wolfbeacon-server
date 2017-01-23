@@ -10,17 +10,17 @@
     <!--Stylesheet-->
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <!--Social Icons-->
-     <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
+    <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
 </head>
 <form>
-<button style="display: none;" id="btn-logout" class="logout">Logout</button>
-<h1 class="sign_in">WolfBeacon API</h1>
-<h1 hidden class="welcome">Welcome!</h1>
-<sub-header class="sign_in">Connect to get started</sub-header>
-<sub-header style="display: none;" class="welcome">Your Token ID can be found below</sub-header>
-<!--<button data-label="Login" type="submit" id="btn-login">Login</button>-->
-<br>
-<div class="social-btns">
+  <button style="display: none;" id="btn-logout" class="logout">Logout</button>
+  <h1 class="sign_in">WolfBeacon API</h1>
+  <h1 hidden class="welcome">Welcome!</h1>
+  <sub-header class="sign_in">Connect to get started</sub-header>
+  <sub-header style="display: none;" class="welcome">Your Token ID can be found below</sub-header>
+  <!--<button data-label="Login" type="submit" id="btn-login">Login</button>-->
+  <br>
+  <div class="social-btns">
     <a style="background-color: #3b5998;" id="btn-facebook" class="btn  facebook"><span class="fa fa-facebook"></span>&nbsp;Sign in with Facebook</a>
     <a style="background-color: #444;" id="btn-github" class="btn  github"><span class="fa fa-github"></span>&nbsp;Sign in with Github</a>
     <a style="background-color: #dc4a38;"  id="btn-google" class="btn  google"><span class="fa fa-google"></span>&nbsp;Sign in with Google</a>
@@ -32,9 +32,9 @@
                     <animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="0.6s" repeatCount="indefinite" />
                 </path>
             </svg>
-        </div>
-</div>
-<div class="clientbefore" id="clientid-div">
+    </div>
+  </div>
+  <div class="clientbefore" id="clientid-div">
     <h3>Auth0 Client ID (Public)</h3>
     <code class="clientid-span">
         cMr82TS37R0DPqLSnC0gCWn2vV3qHK7A
@@ -42,20 +42,20 @@
     <p>
         <button class="clientid-copy-btn">Copy Client Id</button>
     </p>
-</div>
+  </div>
 
-<br>
-<div hidden id="token-div">
+  <br>
+  <div hidden id="token-div">
     <h3>Auth0 Token ID</h3>
     <div class="token">
-    <code id="token-span" style="text-align: center; word-wrap: break-word;">
-    </code>
+      <code id="token-span" style="text-align: center; word-wrap: break-word;">
+      </code>
     </div>
     <p>
         <button class="token-copy-btn">Copy Token</button>
     </p>
-</div>
-<div hidden class="clientafter" hidden id="clientid-div">
+  </div>
+  <div hidden class="clientafter" hidden id="clientid-div">
     <h3>Auth0 Client ID (Public)</h3>
     <code class="clientid-span">
         cMr82TS37R0DPqLSnC0gCWn2vV3qHK7A
@@ -63,39 +63,33 @@
     <p>
         <button class="clientid-copy-btn">Copy Client Id</button>
     </p>
-</div>
+  </div>
 </form>
 <!--<button type="submit" id="btn-login">Login</button>-->
-
 <script>
-     var auth0 = new Auth0({
-        domain: 'wolf-beacon.auth0.com',
-        clientID: 'cMr82TS37R0DPqLSnC0gCWn2vV3qHK7A',
-        callbackURL: 'http://localhost:3002/',
-        responseType: 'token'
-    });
+var auth0 = new Auth0({
+  domain: 'wolf-beacon.auth0.com',
+  clientID: 'cMr82TS37R0DPqLSnC0gCWn2vV3qHK7A',
+  callbackURL: 'http://localhost:3002/',
+  responseType: 'token'
+});
 var lock = new Auth0Lock('cMr82TS37R0DPqLSnC0gCWn2vV3qHK7A', 'wolf-beacon.auth0.com', {
     auth: {
       params: {
         scope: 'openid name'
       }
     }
-  });
-    //var btn_login = document.getElementById('btn-login');
+});
 
-   /* btn_login.addEventListener('click', function () {
-        lock.show();
-    });*/
-
-  var btn_google = document.getElementById('btn-google'); 
-  var btn_facebook = document.getElementById('btn-facebook');  
-  var btn_github = document.getElementById('btn-github');
-  var btn_logout = document.getElementById('btn-logout');
-  //Google Login
-  btn_google.addEventListener('click', function (e) {
+var btn_google = document.getElementById('btn-google'); 
+var btn_facebook = document.getElementById('btn-facebook');  
+var btn_github = document.getElementById('btn-github');
+var btn_logout = document.getElementById('btn-logout');
+//Google Login
+btn_google.addEventListener('click', function (e) {
   e.preventDefault();
   $('.loader--style2').show();
-
+  
   auth0.login({
     connection: 'google-oauth2'
 
@@ -103,8 +97,8 @@ var lock = new Auth0Lock('cMr82TS37R0DPqLSnC0gCWn2vV3qHK7A', 'wolf-beacon.auth0.
     if (err) alert("something went wrong: " + err.message);
   });
 });
-  //Facebook Login
-  btn_facebook.addEventListener('click', function (e) {
+//Facebook Login
+btn_facebook.addEventListener('click', function (e) {
   e.preventDefault();
   $('.loader--style2').show();
 
@@ -115,8 +109,8 @@ var lock = new Auth0Lock('cMr82TS37R0DPqLSnC0gCWn2vV3qHK7A', 'wolf-beacon.auth0.
     if (err) alert("something went wrong: " + err.message);
   });
 });
-  //Github Login
-  btn_github.addEventListener('click', function (e) {
+//Github Login
+btn_github.addEventListener('click', function (e) {
   e.preventDefault();
   $('.loader--style2').show();
 
@@ -128,73 +122,68 @@ var lock = new Auth0Lock('cMr82TS37R0DPqLSnC0gCWn2vV3qHK7A', 'wolf-beacon.auth0.
   });
 });
   
-    lock.on("authenticated", function (authResult) {
-                localStorage.setItem('id_token', authResult.idToken);
+lock.on("authenticated", function (authResult) {
+  localStorage.setItem('id_token', authResult.idToken);
 
-            var token = localStorage.getItem('id_token');
+  var token = localStorage.getItem('id_token');
  
-            $('#token-div').show();
-            $('#token-span').text(token);
-            $('.social-btns').hide();
-            $('.sign_in').hide();
-            $('.clientbefore').hide();
-            $('.clientafter').show();
-            $('.welcome').show();
-            $('.loader--style2').hide();
-            $('#btn-logout').show();
-                 
-    });
+  $('#token-div').show();
+  $('#token-span').text(token);
+  $('.social-btns').hide();
+  $('.sign_in').hide();
+  $('.clientbefore').hide();
+  $('.clientafter').show();
+  $('.welcome').show();
+  $('.loader--style2').hide();
+  $('#btn-logout').show();   
 
- 
-   //Logout Button
-  btn_logout.addEventListener('click', function (e) {
+});
+//Logout Button
+btn_logout.addEventListener('click', function (e) {
   e.preventDefault();
   localStorage.removeItem('id_token');
   window.location.href = 'http://localhost:3002/';
 });
 </script>
-
 <script>
-    var copyEmailBtn = document.querySelector('.token-copy-btn');
-    copyEmailBtn.addEventListener('click', function (event) {
-        // Select the email link anchor text
-        var emailLink = document.getElementById('token-span');
-        var range = document.createRange();
-        range.selectNode(emailLink);
-        window.getSelection().addRange(range);
-        try {
-            // Now that we've selected the anchor text, execute the copy command
-            var successful = document.execCommand('copy');
-            var msg = successful ? 'successful' : 'unsuccessful';
-            console.log('Copy email command was ' + msg);
-        } catch (err) {
-            console.log('Oops, unable to copy');
-        }
-        // Remove the selections - NOTE: Should use
-        // removeRange(range) when it is supported
-        window.getSelection().removeAllRanges();
-    });
+var copyEmailBtn = document.querySelector('.token-copy-btn');
+copyEmailBtn.addEventListener('click', function (event) {
+  // Select the email link anchor text
+  var emailLink = document.getElementById('token-span');
+  var range = document.createRange();
+  range.selectNode(emailLink);
+  window.getSelection().addRange(range);
+  try {
+    // Now that we've selected the anchor text, execute the copy command
+    var successful = document.execCommand('copy');
+    var msg = successful ? 'successful' : 'unsuccessful';
+    console.log('Copy email command was ' + msg);
+  } catch (err) {
+      console.log('Oops, unable to copy');
+    }
+  // Remove the selections - NOTE: Should use
+  // removeRange(range) when it is supported
+  window.getSelection().removeAllRanges();
+});
 </script>
-
-
 <script>
-    var copyEmailBtn = document.querySelector('.clientid-copy-btn');
-    copyEmailBtn.addEventListener('click', function (event) {
-        // Select the email link anchor text
-        var emailLink = document.querySelector('.clientid-span');
-        var range = document.createRange();
-        range.selectNode(emailLink);
-        window.getSelection().addRange(range);
-        try {
-            // Now that we've selected the anchor text, execute the copy command
-            var successful = document.execCommand('copy');
-            var msg = successful ? 'successful' : 'unsuccessful';
-            console.log('Copy email command was ' + msg);
-        } catch (err) {
-            console.log('Oops, unable to copy');
-        }
-        // Remove the selections - NOTE: Should use
-        // removeRange(range) when it is supported
-        window.getSelection().removeAllRanges();
-    });
+var copyEmailBtn = document.querySelector('.clientid-copy-btn');
+copyEmailBtn.addEventListener('click', function (event) {
+  // Select the email link anchor text
+  var emailLink = document.querySelector('.clientid-span');
+  var range = document.createRange();
+  range.selectNode(emailLink);
+  window.getSelection().addRange(range);
+  try {
+    // Now that we've selected the anchor text, execute the copy command
+    var successful = document.execCommand('copy');
+    var msg = successful ? 'successful' : 'unsuccessful';
+    console.log('Copy email command was ' + msg);
+  } catch (err) {
+      console.log('Oops, unable to copy');
+    }
+  // Remove the selections - NOTE: Should use
+  // removeRange(range) when it is supported
+  window.getSelection().removeAllRanges();
+});
 </script>
