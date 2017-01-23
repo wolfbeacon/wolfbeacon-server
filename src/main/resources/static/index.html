@@ -36,7 +36,7 @@
 </div>
 <div class="clientbefore" id="clientid-div">
     <h3>Auth0 Client ID (Public)</h3>
-    <code>
+    <code class="clientid-span">
         cMr82TS37R0DPqLSnC0gCWn2vV3qHK7A
     </code>
     <p>
@@ -48,7 +48,7 @@
 <div hidden id="token-div">
     <h3>Auth0 Token ID</h3>
     <div class="token">
-    <code id="token-span" class=".token-span" style="text-align: center; word-wrap: break-word;">
+    <code id="token-span" style="text-align: center; word-wrap: break-word;">
     </code>
     </div>
     <p>
@@ -57,7 +57,7 @@
 </div>
 <div hidden class="clientafter" hidden id="clientid-div">
     <h3>Auth0 Client ID (Public)</h3>
-    <code class=".clientid-span">
+    <code class="clientid-span">
         cMr82TS37R0DPqLSnC0gCWn2vV3qHK7A
     </code>
     <p>
@@ -158,7 +158,7 @@ var lock = new Auth0Lock('cMr82TS37R0DPqLSnC0gCWn2vV3qHK7A', 'wolf-beacon.auth0.
     var copyEmailBtn = document.querySelector('.token-copy-btn');
     copyEmailBtn.addEventListener('click', function (event) {
         // Select the email link anchor text
-        var emailLink = document.querySelector('.token-span');
+        var emailLink = document.getElementById('token-span');
         var range = document.createRange();
         range.selectNode(emailLink);
         window.getSelection().addRange(range);
